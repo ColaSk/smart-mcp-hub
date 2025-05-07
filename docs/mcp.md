@@ -19,3 +19,15 @@ MCP 的架构由以下几个部分组成：
 - **资源管理模块**：管理系统资源的分配和回收。
 
 ## 使用方法
+## MCP 系统流程图
+
+```mermaid
+graph TD
+    A[Host with MCP Client<br>(Claude, IDEs, Tools)] -->|MCP Protocol| B[MCP Server A]
+    A -->|MCP Protocol| C[MCP Server B]
+    A -->|MCP Protocol| D[MCP Server C]
+    B --> E[Local Data Source A]
+    C --> F[Local Data Source B]
+    D --> G[Web APIs]
+    G --> H[Remote Service C]
+```
